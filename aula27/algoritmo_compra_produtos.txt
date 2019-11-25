@@ -1,0 +1,38 @@
+Escreva um algoritmo para calcular uma 
+venda de 4 produtos com seus valores pré
+definidos, o usuário irá escolher a 
+quantidade que ele deseja adquirir de cada
+um dos produtos, e o valor do produto 
+deve ser apresentado.No final será 
+exibido o valor total da compra o valor 
+total com desconto 10% para pagamento a 
+vista e o valor da parcela com acrescimo
+de 5% para compra parcelada em 3 vezes 
+e o valor total das parcelas
+
+algoritmo <calcular_compra_produtos>
+declare coxinha, pudim, bisnaga, leite, 
+	valor_total, parcela, 
+	n1, n2, n3, n4
+
+coxinha <- 3,00
+pudim <- 1,50
+bisnaga <- 2,00
+leite <- 3,20
+
+leia "coxinha R$ 3,00, qtde?", n1
+n1<- n1*coxinha
+leia "Pudim 1,50, qtde: ", n2
+n2 <- n2*pudim
+leia "Bisnaga 2,00, qtde:", n3
+n3 <- n3*bisnaga
+leia "Leite 3,20, qtde:", n4
+n4 <- n4*leite
+
+valor_total <- n1+n2+n3+n4
+Escreva "O valor total é: ", valor_total
+Escreva "Pg a vista 10%, ", valor_total*0,9
+parcela <- (valor_total*1,05)/3
+Escreva "Valor da parcela em 3x", parcela
+Escreva "Valor total parcelado", parcela*3
+

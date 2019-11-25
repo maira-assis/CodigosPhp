@@ -1,0 +1,19 @@
+algoritmo <nome_idade_18>
+declare nome:caractere, idade:inteiro, ano_nascimento:inteiro
+leia "Digite seu nome" nome
+leia "Digite sua idade" idade
+
+ano_nascimento <- 2018 - idade
+
+se idade <= 18
+	Então
+		Escreva "Nome: " nome
+		Escreva "Ano de Nascimento" ano_nascimento
+		Escreva "Maior de 18 anos"
+Senão
+		Escreva "Nome: " nome
+		Escreva "Ano de Nascimento" ano_nascimento
+		Escreva "Menor de 18 anos"
+Fim Se
+
+fim algoritmo

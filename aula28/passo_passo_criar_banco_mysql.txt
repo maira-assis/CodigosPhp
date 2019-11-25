@@ -1,0 +1,19 @@
+#PRIMERO VOCÊ DEVE CRIAR UMA TABELA USANDO XAMPP NO NAVEGADOR
+#entrar em: localhost/phpmyadmin VAI EM CRIAR BANCO E USE O NOME 
+#EXEMPLO PARA O BANCO DEPOIS EXECUTAR O CODIGO ABAIXO COMPLETO
+#ESSAS LINHAS SÃO COMENTÁRIO MYSQL
+
+CREATE TABLE produtos (
+produto_codigo varchar(15) not null,
+produto_descricao varchar(30),
+produto_unidade char(2),
+produto_saldoatual numeric(10,2),
+primary key (produto_codigo)
+);
+
+INSERT INTO produtos(
+produto_codigo,
+produto_descricao,produto_unidade,
+produto_saldoatual)   
+VALUES("P001","Papel A4","RM",100);
+

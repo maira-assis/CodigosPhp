@@ -1,0 +1,16 @@
+algoritmo <comparar_numero_digitado>
+declare n1
+
+leia "Digite um numero" n1
+
+se n1<5
+	então
+		Escreva "Numero menor 5, o numero é: " n1
+senão Se n1>5
+	então
+		Escreva "Numero maior 5, o numero é: " n1
+senão
+	Escreva "Numero igual a 5, o numero é: " n1
+
+
+

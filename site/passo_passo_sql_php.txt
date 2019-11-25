@@ -1,0 +1,20 @@
+
+pagina 53 apostila programador criar tabela
+
+CREATE TABLE produtos (
+produto_codigo varchar(15) not null,
+produto_descricao varchar(30),
+produto_unidade char(2),
+produto_saldoatual numeric(10,2),
+primary key (produto_codigo)
+);
+
+
+Para inserir na tabela pagina 54
+
+INSERT INTO produtos(
+produto_codigo,
+produto_descricao,produto_unidade,
+produto_saldoatual)   
+VALUES("P001","Papel A4","RM",100);
+

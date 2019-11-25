@@ -1,0 +1,190 @@
+
+html, body {
+	height:100%;
+	background-color:#F5A9A9;
+}
+
+
+#footer1{
+	position:relative;
+    bottom:-9.2%;
+	padding:0;
+    width:100%;
+	background-color:#151515;
+	color:white;
+}
+#footer2{
+	position:relative;
+    bottom:-12.3%;
+	padding:0;
+    width:100%;
+	background-color:#151515;
+	color:white;
+}
+
+.footer{
+	position:relative;
+    bottom:0%;
+	padding:0;
+    width:100%;
+	background-color:#151515;
+	color:white;
+}
+h3{
+	font-family:arial black;
+	font-size:17px;
+}
+p{
+color:black;
+font-family:Bookman Old Style;
+font-style:bold;
+text-align: justify;
+}
+#areatexto{
+	color:black;
+font-family:Bookman Old Style;
+font-style:bold;
+font-size:14px;
+}
+#botoes:link,a:visited{
+background-color: black;
+color:white;
+padding:14px 25px;
+text-decoration: none;
+display: inline block;
+font-size:15;
+font-family:Bookman Old Style;
+}
+
+#botoes:hover,a:active{
+background-color:#ED4242;
+color:white;
+width: 5;
+border-style: solid;
+border-color:black;
+}
+#botoes2{
+background-color: black;
+color:white;
+padding:7px 9px;
+border:black;
+text-decoration: none;
+display: inline block;
+font-size:15;
+font-family:Bookman Old Style;
+}
+h2{
+	font-family:Arial Black;
+	font-size:24px;
+}
+#parceiros{
+	font-family:Arial Black;
+	text-align:center;
+	font-size:24px;
+}
+
+#botoes2:hover,a:active{
+background-color:#ED4242;
+color:white;
+width: 5;
+border-style: solid;
+border-color:black;
+}
+*{
+box-sizing:border-box;
+}
+.img-container{
+float:right;
+width:23.33%;
+padding:5px;
+}
+
+.clearfix
+{
+content:"";
+clear: both;
+display:table;
+
+}
+.div1{
+margin-left:0%;
+width:500px;
+}
+
+.div2{
+margin-left:37%;
+width:770px;
+}
+.div1 ,.div2{
+position:absolute;
+top:10%;
+height:350px;
+display:block;
+}
+#imagens{
+width:100%;
+height:150px;
+}
+
+table{
+	border: solid 4px #FFFFFF;
+	color:black;
+border-collapse:collapse;
+width:100%;
+}
+th{
+	background-color:white;
+	color:black;
+}
+td{
+text-align: left;
+border-bottom:1px solid #ddd;
+}
+tr:hover{background-color:#FF0040;
+color:white;
+font-family; arial black;
+}
+
+#home:hover{background-color:#FF0040;
+color:white;
+font-family; arial black;
+}
+#home1{background-color:#FFFFFF;
+color:black;
+font-family; arial black;
+}
+img{
+	width:100%;
+	height:450px;
+	
+}
+#Topico{
+
+border:solid 3px red;
+margin-left:10%;
+margin-right:10%;
+display:block;
+
+}
+#quem{
+margin:1.5%;
+color:black;
+font-family:Bookman Old Style;
+text-align: justify;
+font-size:18px;
+}
+h4{
+	text-align:center;
+	font-family:Arial Black;
+}
+#banner{
+	
+	border:solid 2px white;
+
+}
+#desenvolvedores{
+	font-family:arial;
+	font-size:14px;
+	color:white;
+	text-align:center;
+}

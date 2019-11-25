@@ -1,0 +1,115 @@
+﻿create database mercearia
+default character set utf8
+default collate utf8_general_ci;
+use mercearia;
+
+SELECT * FROM forncedores f;
+
+create table produto(
+cod_produto int not null auto_increment,
+nome varchar(40) not null,
+descricao varchar(40),
+marca varchar(40),
+quantidade_estoque int,
+data_Validade date,
+forncedor varchar(40),
+valor_compra decimal(5,2),
+valor_venda decimal(5,2) not null,
+primary key (cod_produto))
+default charset =utf8;
+
+create table fornecedores(
+cod_fornecedor int not null auto_increment,
+cnpj_fornecedor varchar(15) unique,
+nome varchar(45) not null,
+endereço varchar(45),
+produtos varchar(40),
+data_cad_fornecedor date,
+primary key (cod_fornecedor))
+default charset =utf8;
+
+drop table fornecedores;
+
+create table venda(
+cod_venda int not null auto_increment,
+nome_produto varchar(40) not null,
+quantidade_vendida int not null,
+valor_a_pagar decimal(5,2),
+data_saida_produto date,
+primary key (cod_venda))
+default charset=utf8;
+describe fornecedores;
+
+create table pessoas(
+cod int not null auto_increment,
+nome_pessoa varchar(45) not null,
+telefone int(15) not null,
+email varchar(45) not null,
+mensagem text(250)not null,
+primary key (cod))
+default charset =utf8;
+
+
+
+insert into venda (nome_produto, quantidade_vendida, valor_a_pagar, data_saida_produto)
+values('Macarrão',50,6.00,20180912),
+('Arroz',245,18.00,20180702),
+('Leite',400,4.50,20191003),
+('Feijao',550,5.50,20180923),
+('Leite condesado',350,5.00,20190802),
+('Maionese',40,6.00,20180913),
+('Biscoito',560,2.90,20190129),
+('Creme de leite',60,2.80,20190208),
+('Pipoca',35,3.00,20190405),
+('Refrigerante',600,8.00,20190518);
+desc fornecedores;
+
+drop table produto;
+
+
+insert into produto (nome, descricao, marca, quantidade_estoque, data_Validade, forncedor, valor_compra, valor_venda)
+values('Macarrão','Macarrão 0.6','Amália','1500','20200915','Amália','2.99','8.00'),
+('Arroz','Arroz Prato Fino','Tio João','2000','20201020','Tio João','4.99','13.00'),
+('Leite','Desnatado','Ninho','800','20211123','BH','0.90','4.10'),
+('Feijao','Carioca','Camil','1000','20250102','Camil','2.99','13.00'),
+('Leite condesado','Moça 200g','Nestle','6200','20250504','Nestle','1.99','4.50'),
+('Maionese','Pote de 497ml ','Heinz','601','20220506','Heinz','1.99','10.00'),
+('Biscoito','Passatempo de chocolate 237g','Nestle','800','20241224','Nestle','0.99','2.70'),
+('Creme de leite','Caixa de 200g','Nestle','900','20260801','Nestle','0.69','3.00'),
+('Pipoca de microondas','Premium 80g','Yoki','200','20220208','Yoki','0.40','2.00'),
+('Refrigerante','Super litros 2000ml','Cola-cola','800','20230430','Coca-cola','3.99','9.00'),
+('Farinha de Trigo','Tradicional tipo1 5kg','Dona Benta','1000','20200915','Dona Benta','3.99','11.00'),
+('Extrato de Tomate','Massa de Toamate 300g','Elefante','2000','20201020','Elefante','0.99','4.00'),
+('Sorvete','Cremosissimo','Kibon 1kg','8500','20211123','Kibon','4.90','16.10'),
+('Café','Solúvel','Nescafé 100g','900','20250102','Nescafé','2.99','9.00'),
+('Nescau','Preparação Instantânea 400g','Nestle','6200','20250504','Nestle','1.99','7.50'),
+('Sabão em pó','MultiAção 1kg ','OMO','601','20220506','OMO','1.99','5.89'),
+('Shamppo','Cabelos sedosos 300g','SEDA','800','20241224','SEDA','4.69','17.70'),
+('Condicionador','Cabelos sedosos 300g','SEDA','900','20260801','SEDA','4.69','17.70'),
+('Cerveja','Skol desce redondo 600ml','Skol','2540','20220208','Skol','2.40','8.00'),
+('Limpa vidro','Multi-uso','Veja','800','20230430','Veja','3.00','7.00'),
+('Lava louça','esponja','Scotch Brite','1500','20200915','Scotch Brite','0.99','5.00'),
+('Macarrão Instantâneo','Miojo','Nissin Lámen','2000','20201020','Nissin Lámen','0.50','2.70'),
+('Sabonete','Desejo de amora','Lux','800','20211123','Lux','0.40','2.10'),
+('Amaciante','Roupas Macias 1kg','YPE','1000','20250102','YPE','3.95','17.00'),
+('Guardanapo','Utramacio','Kitchen','6200','20250504','Kitchen','0.99','5.50'),
+('Catchup','Pote de 390g ','Heinz','601','20220506','Heinz','2.99','11.00'),
+('Açucar','Açucar Refinada 1kg','União','800','20241224','União','0.99','3.70'),
+('Sal','Açucar Refinada 1kg','Sal Lebre','900','20260801','Sal Lebre','0.69','3.00'),
+('Vinagre','Vinagre de maçã','Castelo','200','20220208','Castelo','1.70','8.00'),
+('Óleo','Óleo de milho 600ml','Patéko','3000','20230430','Patekó','0.99','4.00');
+
+select * from produto;
+desc produto;
+insert into fornecedores (cnpj_fornecedor, nome, endereço, produtos, data_cad_fornecedor)
+values('123456987421','Amália','avenida Afonso pena 85','Macarrão',20190125),
+('125478963252','Tio João','Rua da Bahia 525','Arroz',20180123),
+('754896321245','Nonho','Rua Professor Arduino Bolivar 124','Leite',20160228),
+('257418963221','Camil','Rua Teofilo Batista 210','Feijão',20180223),
+('654789321524','Nestle','Rua Riio de Janeiro 1542','Leite Condensado',20150204),
+('963258741254','Heinz','Rua Levy Lafetá 23','Maionese',20170529),
+('854763219022','Nestle','Rua Riio de Janeiro 1542','Biscoito',20150204),
+('852147369422','Nestle','Rua Riio de Janeiro 1542','Creme de Leite',20150204),
+('321547892610','Yoki','Rua Barão de Cocais 87','Pipoca',20160910),
+('125874126932','Coca Cola','Rua São Paulo 456,','Refrigerantes',20150821);
+select * from fornecedores;

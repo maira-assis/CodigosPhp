@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head></head>
+<meta charset="UTF-8">
+<body>
+<?php
+$nome=$_POST['nome'];
+$valor_venda=floatval($_POST['valor_venda']);
+$quantidade_estoque=intval($_POST['quantidade_estoque']);
+
+$con=mysqli_connect('localhost','root','','mercearia') or die("Erro ao conectar o banco!");
+
+$query="Insert into produto values(DEFAULT),'$nome','$valor_venda','$quantidade_estoque')";
+$result=mysqli_query($con, $query)or die("Erro ao inserir dados!");
+if($result)
+echo "<h2>Dados inseridos com sucesso!</h2>";
+else
+echo "<h2>Erro ao inserir dados!</h2>";
+mysqli_close($con);
+?>
+</body>
+</html>

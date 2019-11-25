@@ -1,0 +1,26 @@
+<! DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css.css">
+
+	<meta charset="utf-8">
+</head>
+<body>
+<?php
+?pesquisa=$_POST['pesquisa'];
+echo "<h1>Listagem de produto </h1>";
+$con=mysqli_connect('localhost','root','','mercearia') or die ("Erro ao conectar o banco!");
+$query="Select * from produto where nome like '%".$pesquisa."%'";
+$result=mysqli_query($con, $query)or die("Erro ao inserir dados!");
+echo "<table border='1'>";
+echo "<tr><th>Código</th><th>nome</th><th>Preco</th><th>Quantidade</th><th>Valor Total</th></tr>";
+
+foreach($result as $result)
+echo "<tr><td>".$result['cod_produto']."</td><td>".$result['nome']."</td><td>".$result['valor_venda']."</td><td>"
+.$result['quantidade_estoque']."</td><td>".$result['quantidade_estoque'] * $result['valor_venda']."</td></tr>";
+
+echo "</table>";
+mysqli_close($con);
+?>
+</body>
+</html>

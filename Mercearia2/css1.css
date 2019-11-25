@@ -1,0 +1,114 @@
+
+html, body {
+	height:100%;
+	background-color:#F5A9A9;
+	margin:0;
+
+}
+
+
+footer{
+    position:relative;
+    bottom:-27.95%;
+    width:100%;
+	background-color:#151515;
+	color:white;
+	padding:10px;
+}
+
+h3{
+	font-family:arial;
+	font-size:17px;
+}
+
+
+#Topico{
+	border-style:solid; 
+	margin-right: 1050px;
+}
+p{
+color:black;
+font-family:Bookman Old Style;
+font-style:bold;
+text-align: justify;
+}
+#botoes:link,a:visited{
+background-color: black;
+color:white;
+padding:14px 25px;
+text-decoration: none;
+display: inline block;
+font-size:15;
+font-family:Bookman Old Style;
+}
+
+#botoes:hover,a:active{
+background-color:#ED4242;
+color:white;
+width: 5;
+border-style: solid;
+border-color:black;
+
+}
+
+table{
+	border: red 2px solid;
+}
+th,td{
+text-align: center;
+border-bottom:1px solid #ddd;
+font-family:Arial Black;
+
+}
+
+input{
+	border:solid 1px red;
+	font-family:Bookman Old Style;
+}
+textarea{
+	border:solid 1px red;
+	font-family:Bookman Old Style;
+}
+
+
+#form:link,a:visited{
+background-color: black;
+color:white;
+padding:14px 25px;
+text-decoration: none;
+display: inline block;
+font-size:15;
+font-family: Arial Black;
+}
+
+#form:hover{background-color:#ED4242;
+color:white;
+width: 5;
+border-style: solid;
+border-color:black; 
+}
+#form{
+	border:solid 1px red;
+	font-family:Arial Black;
+}
+
+#home:hover{background-color:#FF0040;
+color:white;
+font-family; arial black;
+}
+
+a{
+position:float;
+}
+
+#home1{background-color:#FFFFFF;
+color:black;
+font-family; arial black;
+}
+
+#desenvolvedores{
+	font-family:arial;
+	font-size:14px;
+	color:white;
+	text-align:center;
+}
